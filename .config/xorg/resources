@@ -1,0 +1,29 @@
+#include "/home/pnelson/.config/xorg/colors/tomorrow_night"
+
+Xft.dpi:              96
+Xft.rgba:             rgb
+Xft.antialias:        true
+Xft.autohint:         false
+Xft.hinting:          true
+Xft.hintstyle:        hintslight
+Xft.lcdfilter:        lcddefault
+
+URxvt.termName:       rxvt-unicode-256color
+URxvt.iso14755:       false
+URxvt.scrollBar:      false
+URxvt.font:           xft:WenQuanYi Micro Hei Mono:size=11
+URxvt.letterSpace:    -2
+URxvt.internalBorder: 8
+
+URxvt.perl-lib: /home/pnelson/Applications/urxvt-perls
+URxvt.perl-ext-common: clipboard,keyboard-select,url-select
+
+URxvt.clipboard.autocopy: true
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+URxvt.keysym.C-v: perl:clipboard:paste
+URxvt.keysym.C-S-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next

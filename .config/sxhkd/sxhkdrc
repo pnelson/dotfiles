@@ -1,0 +1,157 @@
+########################################
+# Desktop
+########################################
+
+# focus desktop by direction
+super + {Left,Down,Up,Right}
+  bspc desktop --focus {prev,prev,next,next}
+
+# focus desktop by direction (vim)
+super + {h,j,k,l}
+  bspc desktop --focus {prev,prev,next,next}
+
+# focus desktop by number
+super + {1-9,0}
+  bspc desktop --focus ^{1-9,10}
+
+
+########################################
+# Windows
+########################################
+
+# close window
+alt + w
+  bspc window --close
+
+# kill window
+  bspc window --kill
+
+# toggle sticky
+alt + s
+  bspc window --toggle sticky
+
+# toggle float
+alt + f
+  bspc window --toggle floating
+
+# toggle fullscreen
+alt + shift + f
+  bspc window --toggle fullscreen
+
+# focus next cyclical window
+alt + Tab
+  bspc window --focus next
+
+# focus prev cyclical window
+alt + shift + Tab
+  bspc window --focus prev
+
+# focus window by direction
+alt + {Left,Down,Up,Right}
+  bspc window --focus {left,down,up,right}
+
+# focus window by direction (vim)
+alt + {h,j,k,l}
+  bspc window --focus {left,down,up,right}
+
+# move window by direction
+alt + shift + {Left,Down,Up,Right}
+  bspc window --swap {left,down,up,right}
+
+# move window by direction (vim)
+alt + shift + {h,j,k,l}
+  bspc window --swap {left,down,up,right}
+
+# resize window by direction
+alt + ctrl + {Left,Down,Up,Right}
+  bspc window --edge {left,down,up,right} push
+
+# resize window by direction (vim)
+alt + ctrl + {h,j,k,l}
+  bspc window --edge {left,down,up,right} push
+
+# move window to desktop by direction
+super + shift + {Left,Down,Up,Right}
+  bspc window --to-desktop {prev,prev,next,next}
+
+# move window to desktop by number
+super + shift + {1-9,0}
+  bspc window --to-desktop ^{1-9,10}
+
+
+########################################
+# Mouse
+########################################
+
+# focus on selected item
+~button1
+  bspc pointer --grab focus
+
+# use mouse to move/resize windows
+super + button{1-3}
+  bspc pointer --grab {move,resize_side,resize_corner}
+
+# track the pointer in any other cases
+super + !button{1-3}
+  bspc pointer --track %i %i
+
+
+########################################
+# Applications
+########################################
+
+# launcher
+super + space
+  dmenu_run -fn '-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*' -nb '#1a1a1a' -nf '#969896' -sb '#1a1a1a' -sf '#b294bb'
+
+# terminal
+super + Return
+  urxvtc
+
+# file manager
+super + e
+  urxvtc -e ranger
+
+# lock the desktop
+super + grave
+  slock
+
+# screenshot desktop
+Print
+  scrot $HOME/Images/screenshot_%Y%m%d_%H%M%S.jpg --quality 100
+
+# screenshot window
+alt + Print
+  scrot $HOME/Images/screenshot_%Y%m%d_%H%M%S.jpg --focused --border --quality 100
+
+
+########################################
+# Media
+########################################
+
+# XF86AudioPlay
+# XF86AudioStop
+# XF86AudioPrev
+# XF86AudioNext
+
+XF86AudioMute
+  amixer set Master toggle 
+
+XF86AudioRaiseVolume
+  amixer set Master 2%+ unmute
+
+XF86AudioLowerVolume
+  amixer set Master 2%- unmute
+
+
+########################################
+# Configuration
+########################################
+
+# reload sxhkd configuration file
+super + Escape
+  pkill -USR1 -x sxhkd
+
+# quit bspwm
+super + shift + Escape
+  pkill -x panel; pkill -x bar; bspc quit

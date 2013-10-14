@@ -1,0 +1,7 @@
+[user]
+  name = Philip Nelson
+  email = me@pnelson.ca
+[color]
+  ui = true
+[core]
+  excludesfile = /home/pnelson/.gitignore

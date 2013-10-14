@@ -1,0 +1,20 @@
+background yes
+out_to_console yes
+out_to_x no
+update_interval 1
+update_interval_on_battery 5
+
+# TODO: eth0 connection indicator
+# TODO: update indicator before title (not conky)
+# TODO: battery if laptop, between RAM and volume
+
+TEXT
+C\
+${if_up tun0}\f1 VPN ${endif}\
+${if_up wlan0}\f3 wlan0: \fr${wireless_essid wlan0} ${wireless_link_qual_perc}% ${endif}\
+\f3 Uptime: \fr${uptime_short} \
+\f3 CPU: \fr${cpu cpu0}% \
+\f3 RAM: \fr${memperc}% \
+\f3 Volume: \fr${exec $XDG_CONFIG_HOME/bspwm/volume.sh} \
+\f3 Date: \fr${time %Y-%m-%d} \
+\f3 Time: \fr${time %H:%M}
