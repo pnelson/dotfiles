@@ -1,4 +1,4 @@
-alias dotgit="GIT_DIR=$HOME/Development/dotfiles/.git GIT_WORK_TREE=$HOME git"
+alias dots="git --git-dir=$HOME/Development/dotfiles --work-tree=$HOME"
 
 alias cl='clear'
 alias ls='LC_COLLATE="C" ls --color=auto --group-directories-first --human-readable'
