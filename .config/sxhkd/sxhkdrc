@@ -62,13 +62,21 @@ alt + shift + {Left,Down,Up,Right}
 alt + shift + {h,j,k,l}
   bspc window --swap {left,down,up,right}
 
-# resize window by direction
-alt + ctrl + {Left,Down,Up,Right}
-  bspc window --edge {left,down,up,right} push
+# resize window by direction left
+alt + ctrl + {Left,h}
+  bspc window --edge left push || bspc window --edge right pull
 
-# resize window by direction (vim)
-alt + ctrl + {h,j,k,l}
-  bspc window --edge {left,down,up,right} push
+# resize window by direction down
+alt + ctrl + {Down,j}
+  bspc window --edge down push || bspc window --edge up pull
+
+# resize window by direction up
+alt + ctrl + {Up,k}
+  bspc window --edge up push || bspc window --edge down pull
+
+# resize window by direction right
+alt + ctrl + {Right,l}
+  bspc window --edge right push || bspc window --edge left pull
 
 # move window to desktop by direction
 super + shift + {Left,Down,Up,Right}
