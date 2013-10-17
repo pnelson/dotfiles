@@ -35,3 +35,6 @@ export PATH=$PATH:$HOME/Scripts
 for bin in $HOME/Scripts/*/bin(N); do
   export PATH=$PATH:$bin
 done
+
+# golang root directory
+export GOROOT="${$(which go)%/*/*}"
