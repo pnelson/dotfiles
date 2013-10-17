@@ -14,3 +14,5 @@ HISTFILE="/tmp/zhistory"
 HISTSIZE=SAVEHIST=1000
 
 setopt APPEND_HISTORY HISTIGNOREALLDUPS SHARE_HISTORY
+
+eval "$(direnv hook zsh)"
