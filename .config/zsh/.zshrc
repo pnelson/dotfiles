@@ -15,4 +15,5 @@ HISTSIZE=SAVEHIST=1000
 
 setopt APPEND_HISTORY HISTIGNOREALLDUPS SHARE_HISTORY
 
+eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
