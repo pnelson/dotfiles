@@ -122,7 +122,7 @@ super + e
 
 # lock the desktop
 super + grave
-  slock
+  i3lock --no-unlock-indicator --image $XDG_CONFIG_HOME/lockscreen
 
 # screenshot desktop
 Print
