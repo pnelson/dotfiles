@@ -39,6 +39,9 @@ done
 # golang root directory
 export GOROOT="${$(which go)%/*/*}"
 
+# npm
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npmrc"
+
 # rbenv
 export RBENV_ROOT="${$(which rbenv)%/*/*}"
 export RBENV_VERSION="2.0.0-p247"
