@@ -6,3 +6,5 @@ alias rm='rm --interactive'
 
 alias cl='clear'
 alias ls='LC_COLLATE="C" ls --color=auto --group-directories-first --human-readable'
+
+alias wcalc='wcalc --quiet'
