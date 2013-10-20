@@ -23,7 +23,7 @@ export XAUTHORITY="/tmp/Xauthority"
 export LESSHISTFILE="/tmp/lesshist"
 
 # irb dotfiles
-export IRBRC="$XDG_CONFIG_HOME/irb/irbrc"
+export IRBRC="$XDG_CONFIG_HOME/irbrc"
 
 # append every bin path for Applications
 for bin in $HOME/Applications/*/bin(N); do
