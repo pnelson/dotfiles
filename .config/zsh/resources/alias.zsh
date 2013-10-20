@@ -7,4 +7,7 @@ alias rm='rm --interactive'
 alias cl='clear'
 alias ls='LC_COLLATE="C" ls --color=auto --group-directories-first --human-readable'
 
+alias pbcopy='xclip -i -selection clipboard'
+alias pbpaste='xclip -o -selection clipboard'
+
 alias wcalc='wcalc --quiet'
