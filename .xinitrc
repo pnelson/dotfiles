@@ -11,6 +11,10 @@ xrdb $XDG_CONFIG_HOME/xorg/resources & xrdbid=$!
 xset b off          # disable bell
 xset r rate 200 30  # set keyboard autorepeat delay and rate
 
+xset +fp $XDG_DATA_HOME/fonts
+xset +fp $XDG_DATA_HOME/fonts/artwiz
+xset fp rehash
+
 xsetroot -solid '#1a1a1a'
 xsetroot -cursor_name left_ptr
 
