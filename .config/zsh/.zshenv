@@ -36,6 +36,9 @@ for bin in $HOME/Scripts/*/bin(N); do
   export PATH=$PATH:$bin
 done
 
+# prepend local bin path
+export PATH="$HOME/.local/bin:$PATH"
+
 # golang root directory
 export GOROOT="${$(which go)%/*/*}"
 
