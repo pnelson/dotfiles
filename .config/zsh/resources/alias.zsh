@@ -11,3 +11,4 @@ alias pbcopy='xclip -i -selection clipboard'
 alias pbpaste='xclip -o -selection clipboard'
 
 alias wcalc='wcalc --quiet'
+alias weechat='weechat --dir "$XDG_CONFIG_HOME/weechat"'
