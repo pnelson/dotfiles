@@ -8,7 +8,7 @@ while read -r line ; do
       ;;
     T*)
       # xtitle output
-      title="\\f5${line#?}"
+      title="\\f2${line#?}"
       ;;
     W*)
       # bspwm internal state
@@ -19,29 +19,21 @@ while read -r line ; do
         item=$1
         name=${item#?}
         case $item in
-          O*)
-            # focused occupied desktop
-            wm_infos="$wm_infos \\f2${name}"
-            ;;
-          F*)
-            # focused free desktop
-            wm_infos="$wm_infos \\f2${name}"
-            ;;
-          U*)
-            # focused urgent desktop
-            wm_infos="$wm_infos \\f2${name}"
+          [OFU]*)
+            # focused occupied/free/urgent desktops
+            wm_infos="$wm_infos \\f2${name} "
             ;;
           o*)
             # occupied desktop
-            wm_infos="$wm_infos \\fr${name}"
+            wm_infos="$wm_infos \\f5${name} "
             ;;
           f*)
             # free desktop
-            wm_infos="$wm_infos \\f7${name}"
+            wm_infos="$wm_infos \\f0${name} "
             ;;
           u*)
             # urgent desktop
-            wm_infos="$wm_infos \\f1${name}"
+            wm_infos="$wm_infos \\f1${name} "
             ;;
         esac
         shift
