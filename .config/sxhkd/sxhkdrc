@@ -3,12 +3,12 @@
 ########################################
 
 # focus desktop by direction
-super + {Left,Down,Up,Right}
-  bspc desktop --focus {prev,prev,next,next}
+super + {Left,Right}
+  bspc desktop --focus {prev,next}
 
 # focus desktop by direction (vim)
-super + {h,j,k,l}
-  bspc desktop --focus {prev,prev,next,next}
+super + {j,k}
+  bspc desktop --focus {prev,next}
 
 # focus desktop by number
 super + {1-9,0}
