@@ -79,11 +79,15 @@ alt + ctrl + {Right,l}
   bspc window --edge right push || bspc window --edge left pull
 
 # move window to desktop by direction
-super + shift + {Left,Down,Up,Right}
-  bspc window --to-desktop {prev,prev,next,next}
+alt + super + {Left,Right}
+  bspc window --to-desktop {prev,next}
+
+# move window to desktop by direction (vim)
+alt + super + {h,j}
+  bspc window --to-desktop {prev,next}
 
 # move window to desktop by number
-super + shift + {1-9,0}
+alt + super + {1-9,0}
   bspc window --to-desktop ^{1-9,10}
 
 
