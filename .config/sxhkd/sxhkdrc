@@ -125,7 +125,7 @@ super + e
   urxvtc -e ranger
 
 # lock the desktop
-super + grave
+super + l
   i3lock --no-unlock-indicator --image $XDG_CONFIG_HOME/lockscreen
 
 # screenshot desktop
