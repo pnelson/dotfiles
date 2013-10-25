@@ -6,7 +6,7 @@ export BSPWM_SOCKET="/tmp/bspwm-socket"
 export PANEL_FIFO="/tmp/panel-fifo"
 export RXVT_SOCKET="/tmp/urxvt-socket"
 
-xrdb $XDG_CONFIG_HOME/xorg/resources & xrdbid=$!
+xrdb $XDG_CONFIG_HOME/xorg/resources
 
 xset b off          # disable bell
 xset r rate 200 30  # set keyboard autorepeat delay and rate
@@ -28,5 +28,4 @@ sxhkd &
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-wait $xrdbid
 exec dbus-launch bspwm -s "$PANEL_FIFO" -p W
