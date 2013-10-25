@@ -1,5 +1,8 @@
 #include "/home/pnelson/.config/xorg/colors/tomorrow_night"
 
+Xcursor.size: 16
+Xcursor.theme: DMZ-White
+
 Xft.dpi:              96
 Xft.rgba:             rgb
 Xft.antialias:        true
