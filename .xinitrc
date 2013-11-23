@@ -25,7 +25,4 @@ redshift &
 urxvtd --quiet --opendisplay --fork
 sxhkd &
 
-[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
-mkfifo "$PANEL_FIFO"
-
-exec dbus-launch bspwm -s "$PANEL_FIFO" -p W
+exec dbus-launch bspwm
