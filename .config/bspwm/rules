@@ -1,0 +1,43 @@
+#!/bin/bash
+readarray -t PROPS < <(xwinfo -its $1)
+
+INST=${PROPS[0]}
+TYPE=${PROPS[1]}
+STATE=(${PROPS[2]})
+
+RULE=()
+
+case "$TYPE" in
+  dock|desktop|notification)
+    RULE+=("manage=off") ;;
+  toolbar|utility)
+    RULE+=("focus=off") ;;
+  desktop)
+    RULE+=("lower=on") ;;
+esac
+
+for s in $STATE; do
+  case $s in
+    sticky)
+      RULE+=("sticky=on") ;;
+    fullscreen)
+      RULE+=("fullscreen=on") ;;
+  esac
+done
+
+case "$INST" in
+  BSPWM_FRAME|bspwm_frame)
+    RULE+=("frame=on") ;;
+  conky)
+    RULE+=("sticky=on manage=off") ;;
+  crx_hbdpomandigafcibbmofojjchbcdagbl)
+    RULE+=("desktop=^5") ;;
+  crx_pjkljhegncpnkpknbcohdijeoejaedia)
+    RULE+=("desktop=^4") ;;
+  keepassx)
+    RULE+=("floating=on") ;;
+  sxiv)
+    RULE+=("fullscreen=on") ;;
+esac
+
+echo "${RULE[*]}"
