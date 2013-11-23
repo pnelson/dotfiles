@@ -28,13 +28,13 @@ export IRBRC="$XDG_CONFIG_HOME/irbrc"
 
 # append every bin path for Applications
 for bin in $HOME/Applications/*/bin(N); do
-  export PATH=$PATH:$bin
+  export PATH="$PATH:$bin"
 done
 
 # append every bin path for Scripts
 export PATH=$PATH:$HOME/Scripts
 for bin in $HOME/Scripts/*/bin(N); do
-  export PATH=$PATH:$bin
+  export PATH="$PATH:$bin"
 done
 
 # prepend local bin path
