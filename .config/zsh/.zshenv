@@ -15,6 +15,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'    # start underlining
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="$XDG_DATA_HOME:/usr/local/share:/usr/share"
 
 # xorg authority dotfile
 export XAUTHORITY="/tmp/Xauthority"
