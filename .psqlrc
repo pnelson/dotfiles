@@ -1,0 +1,14 @@
+-- clearly see difference between NULL and empty string
+\pset null '[NULL]'
+
+-- table format with headers, expanded if lots of data
+\x auto
+
+-- verbose error reports
+\set VERBOSITY verbose
+
+-- ignore duplicates in the history
+\set HISTCONTROL ignoredups
+
+-- force keywords to autocomplete to uppercase
+\set COMP_KEYWORD_CASE upper
