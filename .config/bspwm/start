@@ -1,6 +1,8 @@
 #!/bin/sh
 
 chromium &
-subl &
-/usr/bin/chromium --app-id=hbdpomandigafcibbmofojjchbcdagbl --profile-directory=Default
-/usr/bin/chromium --app-id=pjkljhegncpnkpknbcohdijeoejaedia --profile-directory=Default
+(sleep 1 && subl) &
+
+sleep 2
+/usr/bin/chromium --app-id=hbdpomandigafcibbmofojjchbcdagbl --profile-directory=Default &
+/usr/bin/chromium --app-id=pjkljhegncpnkpknbcohdijeoejaedia --profile-directory=Default &
