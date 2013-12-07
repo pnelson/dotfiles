@@ -36,6 +36,8 @@ case "$INST" in
     RULE+=("desktop=^4") ;;
   keepassx)
     RULE+=("floating=on") ;;
+  sublime_text)
+    RULE+=("desktop=^2") ;;
   sxiv)
     RULE+=("fullscreen=on") ;;
 esac
