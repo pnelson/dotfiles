@@ -147,7 +147,7 @@ alt + Print
 # XF86AudioNext
 
 XF86AudioMute
-  amixer set Master toggle 
+  amixer set Master toggle
 
 XF86AudioRaiseVolume
   amixer set Master 2%+ unmute

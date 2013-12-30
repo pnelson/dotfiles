@@ -16,7 +16,7 @@ filetype plugin indent on
 
 " miscellaneous
 set backspace=indent,eol,start      " enable backspace for everything
-set colorcolumn=+0                  " draw a subtle line at text width
+set colorcolumn=+1                  " draw a subtle line at text width
 set cursorline                      " highlight the full line of the cursor
 set encoding=utf-8                  " use utf-8 in buffers, registers, etc
 set laststatus=2                    " always show the status line
@@ -28,7 +28,7 @@ set number                          " show absolute line number on current line
 set scrolloff=3                     " minimum lines at top/bottom when scrolling
 set noshowmode                      " disable mode message since already in status
 set spelllang=en_us                 " spell check with american english
-set textwidth=80                    " column used for drawing cursorcolumn
+set textwidth=79                    " column used for drawing cursorcolumn
 set title                           " use filename in window title
 set ttimeoutlen=50                  " fix escape key lag
 set t_vb=                           " stop the flashing (needs visualbell)

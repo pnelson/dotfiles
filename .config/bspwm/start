@@ -1,7 +1,6 @@
 #!/bin/sh
 
 chromium &
-(sleep 1 && subl) &
 
 sleep 2
 /usr/bin/chromium --app-id=hbdpomandigafcibbmofojjchbcdagbl --profile-directory=Default &
