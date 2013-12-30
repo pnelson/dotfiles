@@ -7,8 +7,12 @@ alias rm='rm --interactive'
 alias cl='clear'
 alias ls='LC_COLLATE="C" ls --color=auto --group-directories-first --human-readable'
 
+alias df='df --human-readable'
+alias du='du --human-readable'
+
 alias pbcopy='xclip -i -selection clipboard'
 alias pbpaste='xclip -o -selection clipboard'
 
+alias top='htop'
 alias wcalc='wcalc --quiet'
 alias weechat='weechat --dir "$XDG_CONFIG_HOME/weechat"'
