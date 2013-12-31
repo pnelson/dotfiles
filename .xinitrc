@@ -2,9 +2,9 @@
 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
 
-export BSPWM_SOCKET="/tmp/bspwm-socket"
-export PANEL_FIFO="/tmp/panel-fifo"
-export RXVT_SOCKET="/tmp/urxvt-socket"
+export BSPWM_SOCKET="${TMPDIR%/}/bspwm-socket"
+export PANEL_FIFO="${TMPDIR%/}/panel-fifo"
+export RXVT_SOCKET="${TMPDIR%/}/urxvt-socket"
 
 xrdb $XDG_CONFIG_HOME/xorg/resources
 

@@ -1,0 +1,39 @@
+function +vi-git-status() {
+  # check for untracked files or updated submodules since vcs_info does not
+  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+    hook_com[unstaged]='%F{red}✱%f'
+  fi
+}
+
+function prompt_pnelson_precmd {
+  zstyle ':vcs_info:*:prompt:*' nvcsformats "%B%F{blue}${PWD/#$HOME/~}%f%b"
+  vcs_info 'prompt'
+}
+
+function prompt_pnelson_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  autoload -Uz add-zsh-hook
+  autoload -Uz vcs_info
+
+  add-zsh-hook precmd prompt_pnelson_precmd
+
+  zstyle ':prezto:module:editor:info:completing' format '%B%F{red}...%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary' format '❯❯'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format '❮❮'
+
+  zstyle ':vcs_info:*' enable git hg
+  zstyle ':vcs_info:*:prompt:*' check-for-changes true
+  zstyle ':vcs_info:*:prompt:*' stagedstr '%F{yellow}✱%f'
+  zstyle ':vcs_info:*:prompt:*' unstagedstr '%F{red}✱%f'
+  zstyle ':vcs_info:*:prompt:*' formats '%B%u%c %F{magenta}%r%F{green}:%b%f%%b'
+  zstyle ':vcs_info:git*+set-message:*' hooks git-status
+
+  PROMPT='%(!.%F{red}.%F{black})${editor_info[keymap]}%f%b '
+  RPROMPT='${vcs_info_msg_0_}'
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+prompt_pnelson_setup "$@"

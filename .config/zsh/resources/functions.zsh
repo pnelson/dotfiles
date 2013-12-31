@@ -12,18 +12,8 @@ function lsdir() {
   done
 }
 
-# create a new directory and change into it
-function md() {
-  mkdir -p $@ && cd $@
-}
-
 # reset permissions of all files and directories in the current directory
 function reset_permissions() {
   find . -type d -exec chmod 755 {} +
   find . -type f -exec chmod 644 {} +
-}
-
-# show user owned processes
-function psu {
-  ps -U "${1:-$USER}" -o 'pid,%cpu,%mem,command' "${(@)argv[2,-1]}"
 }

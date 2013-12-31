@@ -1,15 +1,28 @@
-# common environment settings
-export EDITOR=vi
-export PAGER=less
+# language
+if [[ -z "$LANG" ]]; then
+  export LANG="en_US.UTF-8"
+fi
 
-# color manpages
-export LESS_TERMCAP_mb=$'\E[01;31m'    # start blinking
-export LESS_TERMCAP_md=$'\E[01;31m'    # start bold mode
-export LESS_TERMCAP_me=$'\E[0m'        # end mode (mb, md, so, us)
-export LESS_TERMCAP_se=$'\E[0m'        # end standout mode
-export LESS_TERMCAP_so=$'\E[01;30;33m' # start standout mode
-export LESS_TERMCAP_ue=$'\E[0m'        # end underlining
-export LESS_TERMCAP_us=$'\E[01;32m'    # start underlining
+# temporary files
+if [[ ! -d "$TMPDIR" ]]; then
+  export TMPDIR="/tmp/$USER"
+  mkdir -p -m 700 "$TMPDIR"
+fi
+TMPPREFIX="${TMPDIR%/}/zsh"
+if [[ ! -d "$TMPPREFIX" ]]; then
+  mkdir -p "$TMPPREFIX"
+fi
+
+# editors
+export EDITOR=vi
+export VISUAL=vi
+
+# less input preprocessor
+export LESS="-F -g -i -M -R -S -w -X -z-4"
+export PAGER=less
+if (( $+commands[lesspipe.sh] )); then
+  export LESSOPEN="| /usr/bin/env lesspipe.sh %s 2>&-"
+fi
 
 # explicitly define xdg directories
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -18,13 +31,19 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DATA_DIRS="$XDG_DATA_HOME:/usr/local/share:/usr/share"
 
 # xorg authority dotfile
-export XAUTHORITY="/tmp/Xauthority"
+export XAUTHORITY="${TMPDIR%/}/Xauthority"
 
 # less history dotfile
-export LESSHISTFILE="/tmp/lesshist"
+export LESSHISTFILE="${TMPDIR%/}/lesshist"
 
 # irb dotfiles
 export IRBRC="$XDG_CONFIG_HOME/irbrc"
+
+# ensure paths don't contain duplicates
+typeset -gU cdpath fpath mailpath path
+
+# add custom autoload function path
+fpath+=("$XDG_CONFIG_HOME/zsh")
 
 # append every bin path for Applications
 for bin in $HOME/Applications/*/bin(N); do

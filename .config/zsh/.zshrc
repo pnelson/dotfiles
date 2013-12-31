@@ -1,19 +1,12 @@
-autoload -U zutil
-autoload -U compinit
-autoload -U complist
-autoload -U colors
+# initialize zprezto
+if [[ -s "$ZDOTDIR/.zprezto/init.zsh" ]]; then
+  source "$ZDOTDIR/.zprezto/init.zsh"
+fi
 
-compinit
-colors
+# custom resources
+source "$ZDOTDIR/resources/alias.zsh"
+source "$ZDOTDIR/resources/functions.zsh"
 
-for file in $XDG_CONFIG_HOME/zsh/resources/*.zsh; do
-  source $file
-done
-
-HISTFILE="/tmp/zhistory"
-HISTSIZE=SAVEHIST=1000
-
-setopt APPEND_HISTORY HISTIGNOREALLDUPS SHARE_HISTORY
-
+# shell hooks
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
