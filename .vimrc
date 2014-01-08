@@ -6,10 +6,16 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
+Bundle 'ervandew/supertab'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
 Bundle 'w0ng/vim-hybrid'
+
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/html5.vim'
 
 " enable filetype detection
 filetype plugin indent on
@@ -19,6 +25,7 @@ set backspace=indent,eol,start      " enable backspace for everything
 set colorcolumn=+1                  " draw a subtle line at text width
 set cursorline                      " highlight the full line of the cursor
 set encoding=utf-8                  " use utf-8 in buffers, registers, etc
+set fillchars+=vert:\               " show space instead of pipe on split
 set laststatus=2                    " always show the status line
 set lazyredraw                      " don't update screen when executing macros
 set linespace=0                     " make font look a bit better
@@ -32,6 +39,7 @@ set textwidth=79                    " column used for drawing cursorcolumn
 set title                           " use filename in window title
 set ttimeoutlen=50                  " fix escape key lag
 set t_vb=                           " stop the flashing (needs visualbell)
+set wildignore+=*/tmp/*             " exclude from autocomplete
 set wildmenu                        " enhanced cmd line completion
 set visualbell                      " stop the beep
 
@@ -90,12 +98,10 @@ let g:airline_mode_map = {
 " hotkeys
 let mapleader = ','
 
-nmap gh <Plug>GitGutterNextHunk
-nmap gH <Plug>GitGutterPrevHunk
-
 " filetype aliases
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " filetype settings
 autocmd FileType go setlocal ts=2 sw=2 sts=2 noexpandtab
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd FileType markdown setlocal ts=4 sw=4 sts=4 formatoptions-=t
