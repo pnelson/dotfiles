@@ -21,9 +21,8 @@ URxvt.internalBorder: 8
 URxvt.perl-lib: /home/pnelson/Applications/urxvt-perls
 URxvt.perl-ext-common: clipboard,keyboard-select,url-select
 
-URxvt.clipboard.autocopy: true
-URxvt.clipboard.copycmd: xclip -i -selection clipboard
-URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+URxvt.clipboard.copycmd: pbcopy
+URxvt.clipboard.pastecmd: pbpaste
 
 URxvt.keysym.C-v: perl:clipboard:paste
 URxvt.keysym.C-S-v: perl:clipboard:paste_escaped
