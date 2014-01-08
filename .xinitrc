@@ -10,6 +10,7 @@ xrdb $XDG_CONFIG_HOME/xorg/resources
 
 xset b off          # disable bell
 xset r rate 200 30  # set keyboard autorepeat delay and rate
+xset m 1/1 9999     # set mouse acceleration and threshold
 
 xset +fp $XDG_DATA_HOME/fonts
 xset +fp $XDG_DATA_HOME/fonts/artwiz
