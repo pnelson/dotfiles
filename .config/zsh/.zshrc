@@ -4,6 +4,10 @@ if [[ -s "$ZDOTDIR/.zprezto/init.zsh" ]]; then
 fi
 
 # prezto overrides
+if zstyle -t ':prezto:environment:grep' color; then
+  export GREP_COLOR='00;31'
+fi
+
 if zstyle -t ':prezto:environment:termcap' color; then
   export LESS_TERMCAP_so=$'\E[01;30;33m'
 fi
