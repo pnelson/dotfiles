@@ -74,6 +74,7 @@ set t_Co=256
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 syntax on
+highlight! default link Todo Comment
 
 " airline
 let g:airline_theme = 'wombat'
