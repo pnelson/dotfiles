@@ -20,10 +20,11 @@ super + {1-9,0}
 ########################################
 
 # close window
-alt + w
+alt + shift + w
   bspc window --close
 
 # kill window
+alt + shift + x
   bspc window --kill
 
 # toggle sticky
@@ -54,6 +55,14 @@ alt + {Left,Down,Up,Right}
 alt + {h,j,k,l}
   bspc window --focus {left,down,up,right}
 
+# preselect window for splitting
+alt + ctrl + {Left,Down,Up,Right}
+  bspc window --presel {left,down,up,right}
+
+# preselect window for splitting (vim)
+alt + ctrl + {h,j,k,l}
+  bspc window --presel {left,down,up,right}
+
 # move window by direction
 alt + shift + {Left,Down,Up,Right}
   bspc window --swap {left,down,up,right}
@@ -61,6 +70,10 @@ alt + shift + {Left,Down,Up,Right}
 # move window by direction (vim)
 alt + shift + {h,j,k,l}
   bspc window --swap {left,down,up,right}
+
+# rotate the tree
+alt + shift + {comma,period}
+  bspc desktop --rotate {90,270}
 
 # resize window by direction left
 alt + shift + ctrl + {Left,h}
@@ -83,7 +96,7 @@ alt + super + {Left,Right}
   bspc window --to-desktop {prev,next}
 
 # move window to desktop by direction (vim)
-alt + super + {h,j}
+alt + super + {j,k}
   bspc window --to-desktop {prev,next}
 
 # move window to desktop by number
