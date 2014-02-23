@@ -9,11 +9,13 @@ Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'w0ng/vim-hybrid'
 
+Bundle 'baskerville/vim-sxhkdrc'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
 
