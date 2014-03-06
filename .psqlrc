@@ -1,8 +1,24 @@
+-- temporarily disable output
+\set QUIET on
+
 -- clearly see difference between NULL and empty string
 \pset null '[NULL]'
 
+-- nicer tables
+\pset linestyle unicode
+
+-- enable timers
+\timing
+
+-- disable default pager
+\pset pager off
+
 -- table format with headers, expanded if lots of data
 \x auto
+
+-- nicer prompt
+\set PROMPT1 '\n%[%033[1;31m%]%# %[%033[30m%]psql://%[%033[1;32m%]%n@%`hostname`:%>%[%033[1;33m%]/%/\n%[%033[1;30m%]%R%[%033[0m%] '
+\set PROMPT2 '%[%033[1;30m%]%R%[%033[0m%] '
 
 -- verbose error reports
 \set VERBOSITY verbose
@@ -12,3 +28,6 @@
 
 -- force keywords to autocomplete to uppercase
 \set COMP_KEYWORD_CASE upper
+
+-- enable output
+\set QUIET off
