@@ -21,8 +21,8 @@ function prompt_pnelson_setup {
   add-zsh-hook precmd prompt_pnelson_precmd
 
   zstyle ':prezto:module:editor:info:completing' format '%B%F{red}...%f%b'
-  zstyle ':prezto:module:editor:info:keymap:primary' format '❯❯'
-  zstyle ':prezto:module:editor:info:keymap:alternate' format '❮❮'
+  zstyle ':prezto:module:editor:info:keymap:primary' format '➤'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format '●'
 
   zstyle ':vcs_info:*' enable git hg
   zstyle ':vcs_info:*:prompt:*' check-for-changes true
@@ -31,7 +31,7 @@ function prompt_pnelson_setup {
   zstyle ':vcs_info:*:prompt:*' formats '%B%u%c %F{magenta}%r%F{green}:%b%f%%b'
   zstyle ':vcs_info:git*+set-message:*' hooks git-status
 
-  PROMPT='%(!.%F{red}.%F{black})${editor_info[keymap]}%f%b '
+  PROMPT='%B%(!.%F{red}.%F{black})${editor_info[keymap]}%f%b '
   RPROMPT='${vcs_info_msg_0_}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
