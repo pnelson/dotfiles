@@ -101,6 +101,16 @@ let g:airline_mode_map = {
 " hotkeys
 let mapleader = ','
 
+nnoremap Y y$
+
+nnoremap <tab> %
+vnoremap <tab> %
+
+nnoremap <leader><space> :nohlsearch<CR>
+
+nnoremap <leader>a :Ack
+nnoremap <leader>A :AckFromSearch<CR>
+
 " filetype aliases
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
