@@ -1,6 +1,5 @@
-[user]
-  name = Philip Nelson
-  email = me@pnelson.ca
+[include]
+  path = config.local
 [color]
   ui = true
 [core]
