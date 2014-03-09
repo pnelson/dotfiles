@@ -5,3 +5,6 @@
   ui = true
 [core]
   excludesfile = /home/pnelson/.config/git/ignore
+[alias]
+  count = rev-list --count HEAD
+  ls = ls-files
