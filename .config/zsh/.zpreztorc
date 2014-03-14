@@ -12,7 +12,28 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'archive' \
   'rsync' \
+  'syntax-highlighting' \
+  'history-substring-search' \
   'prompt'
 
 zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:prompt' theme 'pnelson'
+zstyle ':prezto:module:terminal' auto-title 'yes'
+
+zstyle ':prezto:module:syntax-highlighting' highlighters 'main'
+zstyle ':prezto:module:syntax-highlighting' styles \
+  'reserved-word'          'fg=magenta' \
+  'alias'                  'none' \
+  'builtin'                'none' \
+  'function'               'none' \
+  'command'                'none' \
+  'precommand'             'none' \
+  'hashed-command'         'none' \
+  'path'                   'none' \
+  'path_prefix'            'none' \
+  'path_approx'            'none' \
+  'single-quoted-argument' 'fg=green' \
+  'double-quoted-argument' 'fg=green'
+
+zstyle ':prezto:module:history-substring-search:color' found 'fg=yellow'
+zstyle ':prezto:module:history-substring-search:color' not-found 'fg=red'
