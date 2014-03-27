@@ -14,6 +14,10 @@ super + {j,k}
 super + {1-9,0}
   bspc desktop --focus ^{1-9,10}
 
+# balance the split ratios of the tree
+super + b
+  bspc desktop --balance
+
 
 ########################################
 # Windows
@@ -93,15 +97,15 @@ alt + shift + ctrl + {Right,l}
 
 # move window to desktop by direction
 alt + super + {Left,Right}
-  bspc window --to-desktop {prev,next}
+  bspc window --to-desktop {prev,next} --focus
 
 # move window to desktop by direction (vim)
 alt + super + {j,k}
-  bspc window --to-desktop {prev,next}
+  bspc window --to-desktop {prev,next} --focus
 
 # move window to desktop by number
 alt + super + {1-9,0}
-  bspc window --to-desktop ^{1-9,10}
+  bspc window --to-desktop ^{1-9,10} --focus
 
 
 ########################################
