@@ -9,6 +9,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'dpkg' \
   'git' \
   'archive' \
   'rsync' \
@@ -32,6 +33,7 @@ zstyle ':prezto:module:syntax-highlighting' styles \
   'path'                   'none' \
   'path_prefix'            'none' \
   'path_approx'            'none' \
+  'globbing'               'none' \
   'single-quoted-argument' 'fg=green' \
   'double-quoted-argument' 'fg=green'
 
