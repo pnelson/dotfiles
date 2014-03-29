@@ -12,10 +12,13 @@ if zstyle -t ':prezto:environment:termcap' color; then
   export LESS_TERMCAP_so=$'\E[01;30;33m'
 fi
 
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
 # custom resources
 source "$ZDOTDIR/resources/alias.zsh"
 source "$ZDOTDIR/resources/functions.zsh"
 
 # shell hooks
-eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
