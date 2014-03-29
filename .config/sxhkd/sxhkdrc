@@ -81,19 +81,19 @@ alt + shift + {comma,period}
 
 # resize window by direction left
 alt + shift + ctrl + {Left,h}
-  bspc window --edge left push || bspc window --edge right pull
+  bspc window --edge left -40 || bspc window --edge right -40
 
 # resize window by direction down
 alt + shift + ctrl + {Down,j}
-  bspc window --edge down push || bspc window --edge up pull
+  bspc window --edge down +40 || bspc window --edge up +40
 
 # resize window by direction up
 alt + shift + ctrl + {Up,k}
-  bspc window --edge up push || bspc window --edge down pull
+  bspc window --edge up -40 || bspc window --edge down -40
 
 # resize window by direction right
 alt + shift + ctrl + {Right,l}
-  bspc window --edge right push || bspc window --edge left pull
+  bspc window --edge right +40 || bspc window --edge left +40
 
 # move window to desktop by direction
 alt + super + {Left,Right}

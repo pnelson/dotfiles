@@ -13,7 +13,10 @@ bspc config gapless_monocle      true
 bspc config normal_border_color  '#000000'
 bspc config focused_border_color '#000000'
 
-bspc config rule_command "$XDG_CONFIG_HOME/bspwm/rules"
+bspc rule --add crx_hbdpomandigafcibbmofojjchbc desktop=^9
+bspc rule --add crx_pjkljhegncpnkpknbcohdijeoej desktop=^10
+bspc rule --add keepassx floating=on
+bspc rule --add sxiv fullscreen=on
 
 $XDG_CONFIG_HOME/bspwm/panel &
 $XDG_CONFIG_HOME/bspwm/start &
