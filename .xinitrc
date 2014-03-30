@@ -2,6 +2,10 @@
 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
 export BSPWM_SOCKET="${TMPDIR%/}/bspwm-socket"
 export PANEL_FIFO="${TMPDIR%/}/panel-fifo"
 export RXVT_SOCKET="${TMPDIR%/}/urxvt-socket"
@@ -24,6 +28,7 @@ compton -b
 unclutter -grab -noevents -root -idle 3 &
 redshift &
 urxvtd --quiet --opendisplay --fork
+fcitx -d
 sxhkd &
 
 exec dbus-launch bspwm
