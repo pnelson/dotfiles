@@ -1,6 +1,5 @@
 set nocompatible
 
-set runtimepath+=$GOROOT/misc/vim
 set runtimepath+=$HOME/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -11,11 +10,13 @@ Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'w0ng/vim-hybrid'
 
 Bundle 'baskerville/vim-sxhkdrc'
+Bundle 'jnwhiteh/vim-golang'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
 
@@ -78,7 +79,7 @@ colorscheme hybrid
 syntax on
 highlight! default link Todo Comment
 
-" airline
+" plugins
 let g:airline_theme = 'wombat'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
@@ -98,23 +99,42 @@ let g:airline_mode_map = {
 \   '' : 'S',
 \ }
 
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_user_command = 'ack -f %s'
+
+let g:gofmt_command = 'goimports'
+
 " hotkeys
 let mapleader = ','
+
+nnoremap j gj
+nnoremap k gk
+
+vnoremap > >gv
+vnoremap < <gv
+
+nnoremap H ^
+nnoremap L $
 
 nnoremap Y y$
 
 nnoremap <tab> %
 vnoremap <tab> %
 
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader><space> :nohlsearch<cr>
 
 nnoremap <leader>a :Ack
-nnoremap <leader>A :AckFromSearch<CR>
-
-" filetype aliases
-autocmd BufRead,BufNewFile *.md set filetype=markdown
+nnoremap <leader>A :AckFromSearch<cr>
 
 " filetype settings
-autocmd FileType go setlocal ts=2 sw=2 sts=2 noexpandtab
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-autocmd FileType markdown setlocal ts=4 sw=4 sts=4 formatoptions-=t
+augroup go
+  autocmd!
+  autocmd FileType go setlocal ts=2 sw=2 sts=2 noexpandtab
+  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+augroup end
+
+augroup markdown
+  autocmd!
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd FileType markdown setlocal ts=4 sw=4 sts=4 formatoptions-=t
+augroup end
