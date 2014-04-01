@@ -20,7 +20,7 @@ URxvt.font:           xft:WenQuanYi Micro Hei Mono:size=11
 URxvt.letterSpace:    -2
 URxvt.internalBorder: 8
 
-URxvt.perl-lib: /home/pnelson/Applications/urxvt-perls
+URxvt.perl-lib: /home/pnelson/.local/src/urxvt-perls
 URxvt.perl-ext-common: clipboard,keyboard-select,url-select
 
 URxvt.clipboard.autocopy: true
