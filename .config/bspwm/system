@@ -1,0 +1,48 @@
+#!/bin/sh
+
+uptime() {
+  uptime=$(cat /proc/uptime | awk '{print $1}' | sed -e 's/\..*$//g')
+  days=$(($uptime/60/60/24))
+  hours=$(($uptime/60/60%24))
+  minutes=$(($uptime/60%60))
+
+  out="${minutes}m"
+  [ $hours -gt 0 ] && out="${hours}h $out"
+  [ $days -gt 0 ] && out="${days}d $out"
+  echo $out
+}
+
+cpu() {
+  cpus=$(grep -c processor /proc/cpuinfo)
+  ps -eo pcpu | awk -v "cpus=$cpus" \
+    '/\s*[1-9]/ NR==1 {sum=0} {sum+=$1} END {printf "%d\n", sum/cpus}'
+}
+
+ram() {
+  free | awk '/buffers\/cache/{print $3*100/($3+$4)}' | sed -e 's/\..*$//g'
+}
+
+volume() {
+  state=`amixer get Master | awk '/Front Left:/{print $6}'`
+  if [ $state = "[on]" ]; then
+    echo "$(amixer get Master | awk '/Front Left:/{print $5}' | tr -d '[]')%"
+  else
+    echo "Mute"
+  fi
+}
+
+while true; do
+  c="%{F#ffe7c547}"
+
+  buf="S"
+  buf="$buf $c Uptime: %{F-}$(uptime)"
+  buf="$buf $c CPU: %{F-}$(cpu)%%"
+  buf="$buf $c RAM: %{F-}$(ram)%%"
+  buf="$buf $c Volume: %{F-}$(volume)"
+  buf="$buf $c Date: %{F-}$(date +%Y-%m-%d)"
+  buf="$buf $c Time: %{F-}$(date +%H:%M)"
+  buf="$buf %{F-} "
+
+  echo $buf
+  sleep 0.25
+done
