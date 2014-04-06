@@ -32,15 +32,14 @@ volume() {
 }
 
 while true; do
-  c="%{F#ffe7c547}"
+  c="%{F#ffe78c45}"
 
   buf="S"
-  buf="$buf $c Uptime: %{F-}$(uptime)"
-  buf="$buf $c CPU: %{F-}$(cpu)%%"
-  buf="$buf $c RAM: %{F-}$(ram)%%"
-  buf="$buf $c Volume: %{F-}$(volume)"
-  buf="$buf $c Date: %{F-}$(date +%Y-%m-%d)"
-  buf="$buf $c Time: %{F-}$(date +%H:%M)"
+  buf="$buf $c  %{F-}$(uptime)"
+  buf="$buf $c  %{F-}$(cpu)%%"
+  buf="$buf $c  %{F-}$(ram)%%"
+  buf="$buf $c  %{F-}$(volume)"
+  buf="$buf $c  %{F-}$(date +'%Y-%m-%d %H:%M')"
   buf="$buf %{F-} "
 
   echo $buf

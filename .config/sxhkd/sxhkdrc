@@ -131,7 +131,8 @@ alt + !button{1-3}
 
 # launcher
 super + space
-  dmenu_run -fn '-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*' -nb '#1a1a1a' -nf '#969896' -sb '#1a1a1a' -sf '#b294bb'
+  dmenu_run -fn '-*-tamzen-bold-*-*-*-17-*-*-*-*-*-*-*' \
+    -nb '#1a1a1a' -nf '#969896' -sb '#1a1a1a' -sf '#e7c547'
 
 # terminal
 super + Return

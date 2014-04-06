@@ -16,7 +16,7 @@ URxvt.iso14755:       false
 URxvt.iso14755_52:    false
 URxvt.meta8:          true
 URxvt.scrollBar:      false
-URxvt.font:           xft:WenQuanYi Micro Hei Mono:size=11
+URxvt.font:           xft:WenQuanYi Micro Hei Mono:size=11,-*-stlarch-medium-*-*-*-10-*-*-*-*-*-*-*
 URxvt.letterSpace:    -2
 URxvt.internalBorder: 8
 
