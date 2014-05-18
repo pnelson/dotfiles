@@ -9,6 +9,7 @@ Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-repeat'
@@ -29,6 +30,7 @@ set colorcolumn=+1                  " draw a subtle line at text width
 set cursorline                      " highlight the full line of the cursor
 set encoding=utf-8                  " use utf-8 in buffers, registers, etc
 set fillchars+=vert:\               " show space instead of pipe on split
+set formatoptions-=t                " disable auto-wrap text using textwidth
 set laststatus=2                    " always show the status line
 set lazyredraw                      " don't update screen when executing macros
 set linespace=0                     " make font look a bit better
@@ -136,5 +138,5 @@ augroup end
 augroup markdown
   autocmd!
   autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd FileType markdown setlocal ts=4 sw=4 sts=4 formatoptions-=t
+  autocmd FileType markdown setlocal ts=4 sw=4 sts=4 formatoptions+=t
 augroup end
