@@ -20,7 +20,7 @@ function lsdir() {
 # make a project specific go dir
 function mkgodir() {
   mkdir -p "$1/src/github.com/$USER/$1"
-  echo "export GOPATH=\"\$PWD\"\nexport PATH=\"\$GOPATH/bin:\$PATH\"" > "$1/.envrc"
+  echo "export GOPATH=\"\$GOPATH:\$PWD\"\nexport PATH=\"\$PWD/bin:\$PATH\"" > "$1/.envrc"
   cd "$1/src/github.com/$USER/$1"
 }
 
@@ -28,4 +28,9 @@ function mkgodir() {
 function reset_permissions() {
   find . -type d -exec chmod 755 {} +
   find . -type f -exec chmod 644 {} +
+}
+
+# play youtube video by vid
+function youtube() {
+  mpv "https://www.youtube.com/watch?v=$1"
 }
