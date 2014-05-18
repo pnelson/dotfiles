@@ -24,7 +24,6 @@ xsetroot -solid '#1a1a1a'
 xsetroot -cursor_name left_ptr
 
 hsetroot -fill $XDG_CONFIG_HOME/wallpaper &
-compton -b
 unclutter -grab -noevents -root -idle 3 &
 redshift &
 urxvtd --quiet --opendisplay --fork
