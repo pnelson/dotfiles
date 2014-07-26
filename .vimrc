@@ -1,25 +1,27 @@
 set nocompatible
 
 set runtimepath+=$HOME/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'bling/vim-airline'
-Bundle 'ervandew/supertab'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'w0ng/vim-hybrid'
+Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'w0ng/vim-hybrid'
 
-Bundle 'baskerville/vim-sxhkdrc'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'othree/html5.vim'
+Plugin 'baskerville/vim-sxhkdrc'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'othree/html5.vim'
+
+call vundle#end()
 
 " enable filetype detection
 filetype plugin indent on
@@ -119,9 +121,6 @@ nnoremap H ^
 nnoremap L $
 
 nnoremap Y y$
-
-nnoremap <tab> %
-vnoremap <tab> %
 
 nnoremap <leader><space> :nohlsearch<cr>
 
