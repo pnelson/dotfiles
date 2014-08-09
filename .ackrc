@@ -1,3 +1,8 @@
 --pager=less
---ignore-dir=node_modules/
+--ignore-dir=bower_components
+--ignore-dir=build
+--ignore-dir=dist
+--ignore-dir=node_modules
+--ignore-dir=tmp
+--ignore-dir=vendor
 --color-match=red
