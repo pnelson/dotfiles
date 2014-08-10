@@ -9,7 +9,6 @@ Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-repeat'
@@ -17,9 +16,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0ng/vim-hybrid'
 
 Plugin 'baskerville/vim-sxhkdrc'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
@@ -106,8 +107,6 @@ let g:airline_mode_map = {
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_user_command = 'ack -f %s'
 
-let g:gofmt_command = 'goimports'
-
 " hotkeys
 let mapleader = ','
 
@@ -131,7 +130,11 @@ nnoremap <leader>A :AckFromSearch<cr>
 augroup go
   autocmd!
   autocmd FileType go setlocal ts=2 sw=2 sts=2 noexpandtab
-  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+  autocmd FileType go nmap <Leader>i <Plug>(go-info)
+  autocmd FileType go nmap <Leader>gd <Plug>(go-doc-vertical)
+  autocmd FileType go nmap <leader>r <Plug>(go-run)
+  autocmd FileType go nmap <leader>b <Plug>(go-build)
+  autocmd FileType go nmap <leader>t <Plug>(go-test)
 augroup end
 
 augroup markdown
