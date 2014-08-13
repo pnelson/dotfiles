@@ -21,6 +21,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/nginx.vim'
 
 call vundle#end()
 
@@ -110,6 +111,8 @@ let g:ctrlp_user_command = 'ack -f %s'
 " hotkeys
 let mapleader = ','
 
+cmap w!! w !sudo tee > /dev/null %
+
 nnoremap j gj
 nnoremap k gk
 
@@ -141,4 +144,9 @@ augroup markdown
   autocmd!
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd FileType markdown setlocal ts=4 sw=4 sts=4 formatoptions+=t
+augroup end
+
+augroup nginx
+  autocmd!
+  autocmd BufRead,BufNewFile /etc/nginx/* if &ft == '' | setfiletype nginx | endif
 augroup end
