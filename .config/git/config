@@ -7,4 +7,6 @@
 [alias]
   changes = diff-tree --no-commit-id --name-status -r
   count = rev-list --count HEAD
+  graph = log --decorate --graph --oneline
+  logs = log --pretty=format:'%C(auto)%h %s'
   ls = ls-files
