@@ -18,6 +18,7 @@ xset m 1/1 9999     # set mouse acceleration and threshold
 
 xset +fp $XDG_DATA_HOME/fonts
 xset +fp $XDG_DATA_HOME/fonts/artwiz
+xset +fp $XDG_DATA_HOME/fonts/tamzen
 xset fp rehash
 
 xsetroot -solid '#1a1a1a'
