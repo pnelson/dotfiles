@@ -5,8 +5,11 @@
 [core]
   excludesfile = /home/pnelson/.config/git/ignore
 [alias]
+  all = add --all
+  amend = commit --amend --reuse-message=HEAD
   changes = diff-tree --no-commit-id --name-status -r
   count = rev-list --count HEAD
   graph = log --decorate --graph --oneline
   logs = log --pretty=format:'%C(auto)%h %s'
   ls = ls-files
+  undo = reset --soft HEAD^
