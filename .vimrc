@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 Plugin 'bling/vim-airline'
+Plugin 'chriskempson/base16-vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
@@ -13,7 +14,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'w0ng/vim-hybrid'
 
 Plugin 'baskerville/vim-sxhkdrc'
 Plugin 'fatih/vim-go'
@@ -79,14 +79,14 @@ set foldlevelstart=99           " no folds closed on open
 set foldmethod=marker           " collapse code using markers
 
 " colors
-set t_Co=256
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-syntax on
+syntax enable
+set background=light
+let base16colorspace=256
+colorscheme base16-solarized
 highlight! default link Todo Comment
 
 " plugins
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'base16'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_section_y = '%{printf("%s%s",&fenc,&ff!="unix"?":".&ff:"")}'

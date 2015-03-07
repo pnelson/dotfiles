@@ -12,6 +12,10 @@ if zstyle -t ':prezto:environment:termcap' color; then
   export LESS_TERMCAP_so=$'\E[01;30;33m'
 fi
 
+# base16
+BASE16_SHELL="$HOME/.local/share/base16-shell/base16-solarized.light.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
