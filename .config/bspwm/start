@@ -1,7 +1,0 @@
-#!/bin/sh
-
-/usr/bin/google-chrome &
-
-sleep 2
-/usr/bin/google-chrome --app-id=hbdpomandigafcibbmofojjchbcdagbl --profile-directory=Default &
-/usr/bin/google-chrome --app-id=pjkljhegncpnkpknbcohdijeoejaedia --profile-directory=Default &
