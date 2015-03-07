@@ -10,7 +10,7 @@ export BSPWM_SOCKET="${TMPDIR%/}/bspwm-socket"
 export PANEL_FIFO="${TMPDIR%/}/panel-fifo"
 export RXVT_SOCKET="${TMPDIR%/}/urxvt-socket"
 
-xrdb $XDG_CONFIG_HOME/xorg/resources
+xrdb "$XDG_CONFIG_HOME/x11/Xresources"
 
 xset b off          # disable bell
 xset r rate 200 30  # set keyboard autorepeat delay and rate
