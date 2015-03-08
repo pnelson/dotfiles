@@ -4,6 +4,9 @@
   ui = true
 [core]
   excludesfile = /home/pnelson/.config/git/ignore
+  whitespace = trailing-space,space-before-tab
+[apply]
+  whitespace = fix
 [alias]
   all = add --all
   amend = commit --amend --reuse-message=HEAD
