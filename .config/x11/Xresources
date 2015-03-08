@@ -18,7 +18,7 @@ URxvt.meta8:          true
 URxvt.scrollBar:      false
 URxvt.font:           xft:WenQuanYi Micro Hei Mono:size=11,-*-stlarch-medium-*-*-*-10-*-*-*-*-*-*-*
 URxvt.letterSpace:    -2
-URxvt.internalBorder: 8
+URxvt.internalBorder: 4
 
 URxvt.perl-lib: /home/pnelson/.local/src/urxvt-perls
 URxvt.perl-ext-common: clipboard,keyboard-select,url-select
