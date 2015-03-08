@@ -8,7 +8,7 @@ while read -r line; do
       ;;
     T*)
       # xtitle output
-      title="%{F#ffb9ca4a}${line#?}"
+      title="%{F#fffdf6e3}${line#?}"
       ;;
     W*)
       # bspwm internal state
@@ -21,19 +21,19 @@ while read -r line; do
         case $item in
           [OFU]*)
             # focused occupied/free/urgent desktops
-            wm="$wm %{F#ffb9ca4a}${name} "
+            wm="$wm %{F#ff268bd2}${name} "
             ;;
           o*)
             # occupied desktop
-            wm="$wm %{F#ffc397d8}${name} "
+            wm="$wm %{F#ff859900}${name} "
             ;;
           f*)
             # free desktop
-            wm="$wm %{F#ff373b41}${name} "
+            wm="$wm %{F#ff586e75}${name} "
             ;;
           u*)
             # urgent desktop
-            wm="$wm %{F#ffd54e53}${name} "
+            wm="$wm %{F#ffdc322f}${name} "
             ;;
         esac
         shift

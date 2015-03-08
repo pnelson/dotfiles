@@ -17,5 +17,5 @@ bspc control --subscribe > $PANEL_FIFO &
 $XDG_CONFIG_HOME/bspwm/system > $PANEL_FIFO &
 
 cat $PANEL_FIFO | $XDG_CONFIG_HOME/bspwm/status | bar \
-  -g x18 -u 0 -B "#ff1a1a1a" -F "#ffc5c8c6" \
+  -g x18 -u 0 -B "#ff002b36" -F "#fffdf6e3" \
   -f "-*-stlarch-medium-*-*-*-10-*-*-*-*-*-*-*,-artwiz-anorexia-medium-*-*-*-11-*-*-*-*-*-*-*"

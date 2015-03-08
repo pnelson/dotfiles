@@ -32,7 +32,7 @@ volume() {
 }
 
 while true; do
-  c="%{F#ffe78c45}"
+  c="%{F#ffb58900}"
 
   buf="S"
   buf="$buf $c  %{F-}$(uptime)"
