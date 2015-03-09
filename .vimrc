@@ -84,6 +84,11 @@ set background=light
 let base16colorspace=256
 colorscheme base16-solarized
 highlight! default link Todo Comment
+if &background == 'dark'
+  highlight SpecialKey ctermfg=18
+else
+  highlight SpecialKey ctermfg=21
+endif
 
 " plugins
 let g:airline_theme = 'base16'
