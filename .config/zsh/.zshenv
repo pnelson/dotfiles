@@ -46,5 +46,6 @@ export GOPATH="$HOME/.local"
 # relocate dotfiles
 export XAUTHORITY="${TMPDIR%/}/Xauthority"
 export LESSHISTFILE="${TMPDIR%/}/lesshist"
+export ACKRC="$XDG_CONFIG_HOME/ackrc"
 export IRBRC="$XDG_CONFIG_HOME/irbrc"
 export npm_config_userconfig="$XDG_CONFIG_HOME/npmrc"
