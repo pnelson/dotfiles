@@ -5,4 +5,6 @@
 --ignore-dir=node_modules
 --ignore-dir=tmp
 --ignore-dir=vendor
---color-match=red
+--color-filename=bold blue
+--color-match=yellow
+--color-lineno=white
