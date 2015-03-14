@@ -113,6 +113,8 @@ let g:airline_mode_map = {
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_user_command = 'ack -f %s'
 
+let g:go_fmt_command = 'goimports'
+
 " hotkeys
 let mapleader = ','
 
@@ -139,10 +141,18 @@ augroup go
   autocmd!
   autocmd FileType go setlocal ts=2 sw=2 sts=2 noexpandtab
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
-  autocmd FileType go nmap <Leader>gd <Plug>(go-doc-vertical)
+  autocmd FileType go nmap <Leader>s <Plug>(go-implements)
+  autocmd FileType go nmap <Leader>e <Plug>(go-rename)
   autocmd FileType go nmap <leader>r <Plug>(go-run)
   autocmd FileType go nmap <leader>b <Plug>(go-build)
   autocmd FileType go nmap <leader>t <Plug>(go-test)
+  autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+  autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
+  autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+  autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
+  autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
+  autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+  autocmd FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 augroup end
 
 augroup markdown
