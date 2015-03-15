@@ -26,7 +26,7 @@ URxvt.scrollWithBuffer:    true
 URxvt.scrollTtyKeypress:   true
 
 URxvt.perl-lib: /home/pnelson/.local/src/urxvt-perls
-URxvt.perl-ext-common: clipboard,keyboard-select,url-select
+URxvt.perl-ext-common: clipboard,url-select
 
 URxvt.clipboard.autocopy: true
 URxvt.clipboard.copycmd: xclip -selection clipboard -in
@@ -35,8 +35,6 @@ URxvt.clipboard.pastecmd: xclip -selection clipboard -out
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.keysym.M-S-v: perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-!URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.M-u: perl:url-select:select_next
 
 URxvt.keysym.C-1: \033[27;5;49~
