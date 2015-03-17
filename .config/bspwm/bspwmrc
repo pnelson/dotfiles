@@ -15,10 +15,10 @@ bspc config normal_sticky_border_color    '#b58900'
 bspc config focused_sticky_border_color   '#268bd2'
 bspc config urgent_border_color           '#dc322f'
 
-bspc monitor --reset-desktops          
+bspc monitor --reset-desktops         
 
-bspc rule --add crx_hbdpomandigafcibbmofojjchbcdagbl desktop=^9
-bspc rule --add crx_pjkljhegncpnkpknbcohdijeoejaedia desktop=^10
+bspc rule --add crx_hbdpomandigafcibbmofojjchbcdagbl desktop=^8
+bspc rule --add crx_pjkljhegncpnkpknbcohdijeoejaedia desktop=^9
 bspc rule --add keepassx floating=on
 bspc rule --add sxiv fullscreen=on
 
