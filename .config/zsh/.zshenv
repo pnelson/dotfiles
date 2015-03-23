@@ -16,11 +16,12 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # temporary files
+TMPDIR="${TMPDIR%/}"
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$USER"
   mkdir -p -m 700 "$TMPDIR"
 fi
-TMPPREFIX="${TMPDIR%/}/zsh"
+TMPPREFIX="$TMPDIR/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
@@ -52,8 +53,8 @@ export DOTFILES="$GITHUB/dotfiles"
 export GOPATH="$HOME"
 
 # relocate dotfiles
-export XAUTHORITY="${TMPDIR%/}/Xauthority"
-export LESSHISTFILE="${TMPDIR%/}/lesshist"
+export XAUTHORITY="$TMPDIR/Xauthority"
+export LESSHISTFILE="$TMPDIR/lesshist"
 export ACKRC="$XDG_CONFIG_HOME/ackrc"
 export IRBRC="$XDG_CONFIG_HOME/irbrc"
 export npm_config_userconfig="$XDG_CONFIG_HOME/npmrc"
