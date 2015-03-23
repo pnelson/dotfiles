@@ -36,12 +36,20 @@ if (( $+commands[lesspipe.sh] )); then
   export LESSOPEN="| /usr/bin/env lesspipe.sh %s 2>&-"
 fi
 
-# prepend user bin paths
-export PATH="$HOME/Scripts:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+# identity
+export GPGKEY="71ED0A1F"
+
+# prepend user bin path
+export PATH="$HOME/bin:$PATH"
+
+# source code
+export CODE="$HOME/src/pnelson.ca"
+export GITHUB="$HOME/src/github.com/pnelson"
+export BITBUCKET="$HOME/src/bitbucket.org/pnelson"
+export DOTFILES="$GITHUB/dotfiles"
 
 # golang root directory
-export GOPATH="$HOME/.local"
+export GOPATH="$HOME"
 
 # relocate dotfiles
 export XAUTHORITY="${TMPDIR%/}/Xauthority"

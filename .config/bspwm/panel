@@ -16,6 +16,6 @@ xtitle -sf 'T%s' > $PANEL_FIFO &
 bspc control --subscribe > $PANEL_FIFO &
 $XDG_CONFIG_HOME/bspwm/system > $PANEL_FIFO &
 
-cat $PANEL_FIFO | $XDG_CONFIG_HOME/bspwm/status | bar \
+cat $PANEL_FIFO | $XDG_CONFIG_HOME/bspwm/status | lemonbar \
   -g x18 -u 0 -B "#ff002b36" -F "#fffdf6e3" \
   -f "-*-stlarch-medium-*-*-*-10-*-*-*-*-*-*-*,-artwiz-anorexia-medium-*-*-*-11-*-*-*-*-*-*-*"

@@ -13,7 +13,7 @@ if zstyle -t ':prezto:environment:termcap' color; then
 fi
 
 # base16
-BASE16_SHELL="$HOME/.local/share/base16-shell/base16-solarized.light.sh"
+BASE16_SHELL="$XDG_DATA_HOME/base16-shell/base16-solarized.light.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # chruby
