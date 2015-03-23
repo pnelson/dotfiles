@@ -25,6 +25,9 @@ TMPPREFIX="$TMPDIR/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+if [[ ! -d "$TMPDIR/vim" ]]; then
+  mkdir -p "$TMPDIR/vim"
+fi
 
 # editors
 export EDITOR=vi

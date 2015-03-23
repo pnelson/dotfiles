@@ -1,7 +1,7 @@
 set nocompatible
 
-set runtimepath+=$HOME/.vim/bundle/vundle/
-call vundle#begin()
+set runtimepath+=$XDG_CONFIG_HOME/vim/bundle/vundle
+call vundle#begin('$XDG_CONFIG_HOME/vim/bundle')
 
 Plugin 'gmarik/vundle'
 
@@ -54,10 +54,11 @@ set visualbell                      " stop the beep
 
 " backup swap files
 set backup
-set backupdir=$HOME/.vim/tmp
+set backupdir=$TMPDIR/vim
 set backupskip=/tmp/*
-set directory=$HOME/.vim/tmp
+set directory=$TMPDIR/vim
 set writebackup
+set viminfo+=n$TMPDIR/vim/viminfo
 
 " tabs
 set autoindent                  " copy indent from previous line
