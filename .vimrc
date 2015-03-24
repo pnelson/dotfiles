@@ -1,7 +1,7 @@
 set nocompatible
 
-set runtimepath+=$XDG_CONFIG_HOME/vim/bundle/vundle
-call vundle#begin('$XDG_CONFIG_HOME/vim/bundle')
+set runtimepath+=$XDG_DATA_HOME/vim/vundle
+call vundle#begin('$XDG_DATA_HOME/vim')
 
 Plugin 'gmarik/vundle'
 
