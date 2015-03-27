@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $(pgrep -cx $XDG_CONFIG_HOME/bspwm/panel) -gt 1 ]; then
+if [ $(pgrep -cx panel) -gt 1 ]; then
   printf "%s\n" "The panel is already running." >&2
   exit 1
 fi
