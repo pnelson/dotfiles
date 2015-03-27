@@ -100,9 +100,13 @@ alt + super + {1-9}
 alt + button{1-3}
   bspc pointer --grab {move,resize_side,resize_corner}
 
-# track the pointer in any other cases
+# track the poiner
 alt + !button{1-3}
   bspc pointer --track %i %i
+
+# terminate pointer action on release
+alt + @button{1-3}
+  bspc pointer --ungrab
 
 
 ########################################
