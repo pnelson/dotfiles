@@ -12,6 +12,11 @@ export RXVT_SOCKET="$TMPDIR/urxvt-socket"
 
 xrdb "$XDG_CONFIG_HOME/x11/Xresources"
 
+xset dpms 180 360 480
+
+xset s noblank      # disable video blank
+xset s off          # disable screen saver
+
 xset b off          # disable bell
 xset r rate 180 45  # set keyboard autorepeat delay and rate
 xset m 1/1 9999     # set mouse acceleration and threshold
