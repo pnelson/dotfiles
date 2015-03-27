@@ -159,13 +159,14 @@ XF86AudioLowerVolume
 
 
 ########################################
-# Configuration
+# System
 ########################################
 
-# reload sxhkd configuration file
 super + Escape
-  pkill -USR1 -x sxhkd
+  systemctl suspend
 
-# quit bspwm
+super + ctrl + Escape
+  systemctl reboot
+
 super + shift + Escape
-  pkill -x panel; pkill -x bar; bspc quit
+  systemctl poweroff
