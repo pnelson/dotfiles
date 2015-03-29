@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/settings"
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

@@ -8,6 +8,7 @@
 !.config/fcitx/config
 !.config/fcitx/profile
 .config/git/config.local
+.config/gtk-2.0/gtkfilechooser.ini
 .config/pulse/
 .config/weechat/*
 !.config/weechat/buffers.conf
