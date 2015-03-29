@@ -1,6 +1,8 @@
 */*
 !.config/*
 .config/chromium/
+.config/direnv/
+.config/enchant/
 .config/fcitx/*
 !.config/fcitx/conf/fcitx-classic-ui.config
 !.config/fcitx/conf/fcitx-clipboard.config
@@ -14,9 +16,10 @@
 !.config/weechat/buffers.conf
 !.config/weechat/irc.conf
 !.config/weechat/weechat.conf
+.config/zsh/.zcompcache/
+.config/zsh/.zprezto/
 .config/zsh/.zcompdump
 .config/zsh/.zcompdump.zwc
 .config/zsh/.zhistory
-.config/zsh/.zprezto/
 .config/lockscreen
 .config/wallpaper
