@@ -43,6 +43,7 @@ set modelines=0                     " disable line checking on set commands
 set number                          " show absolute line number on current line
 set scrolloff=3                     " minimum lines at top/bottom when scrolling
 set noshowmode                      " disable mode message since already in status
+set noswapfile                      " disable swap files
 set spelllang=en_us                 " spell check with american english
 set textwidth=79                    " column used for drawing cursorcolumn
 set title                           " use filename in window title
@@ -50,15 +51,8 @@ set ttimeoutlen=50                  " fix escape key lag
 set t_vb=                           " stop the flashing (needs visualbell)
 set wildignore+=*/tmp/*             " exclude from autocomplete
 set wildmenu                        " enhanced cmd line completion
+set viminfo=                        " disable the viminfo file
 set visualbell                      " stop the beep
-
-" backup swap files
-set backup
-set backupdir=$TMPDIR/vim
-set backupskip=/tmp/*
-set directory=$TMPDIR/vim
-set writebackup
-set viminfo+=n$TMPDIR/vim/viminfo
 
 " tabs
 set autoindent                  " copy indent from previous line
