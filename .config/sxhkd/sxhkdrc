@@ -132,11 +132,11 @@ super + l
 
 # screenshot desktop
 Print
-  scrot $HOME/Images/screenshot_%Y%m%d_%H%M%S.jpg --quality 100
+  scrot $XDG_CACHE_HOME/screenshot_%Y%m%dT%H%M%S.jpg --quality 100
 
 # screenshot window
 alt + Print
-  scrot $HOME/Images/screenshot_%Y%m%d_%H%M%S.jpg --focused --border --quality 100
+  scrot $XDG_CACHE_HOME/screenshot_%Y%m%dT%H%M%S.jpg --focused --border --quality 100
 
 
 ########################################
