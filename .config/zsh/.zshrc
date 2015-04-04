@@ -5,7 +5,8 @@ fi
 
 # prezto overrides
 if zstyle -t ':prezto:environment:grep' color; then
-  export GREP_COLOR='00;31'
+  export GREP_COLOR="00;33"             # BSD
+  export GREP_COLORS="mt=$GREP_COLOR"   # GNU
 fi
 
 if zstyle -t ':prezto:environment:termcap' color; then
@@ -13,8 +14,7 @@ if zstyle -t ':prezto:environment:termcap' color; then
 fi
 
 # base16
-BASE16_SHELL="$XDG_DATA_HOME/base16-shell/base16-solarized.light.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+source "$XDG_DATA_HOME/base16-shell/base16-solarized.light.sh"
 
 # chruby
 source /usr/local/share/chruby/chruby.sh

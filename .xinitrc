@@ -1,14 +1,8 @@
 #!/bin/sh
 
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/settings"
-
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
-
-export BSPWM_SOCKET="$TMPDIR/bspwm-socket"
-export PANEL_FIFO="$TMPDIR/panel-fifo"
-export RXVT_SOCKET="$TMPDIR/urxvt-socket"
 
 xrdb "$XDG_CONFIG_HOME/x11/Xresources"
 
