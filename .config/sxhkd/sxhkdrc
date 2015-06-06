@@ -163,7 +163,7 @@ XF86AudioLowerVolume
 ########################################
 
 super + Escape
-  systemctl suspend
+  i3lock --no-unlock-indicator --image $XDG_CONFIG_HOME/lockscreen && systemctl suspend
 
 super + ctrl + Escape
   systemctl reboot
