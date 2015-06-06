@@ -1,2 +1,2 @@
-cache = /home/pnelson/.cache/npm
-prefix = /home/pnelson/.local
+cache = /home/pnelson/tmp/npm
+prefix = /home/pnelson
