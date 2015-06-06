@@ -39,6 +39,9 @@ export DOTFILES="$GITHUB/dotfiles"
 # golang root directory
 export GOPATH="$HOME"
 
+# password store repository
+export PASSWORD_STORE_DIR="$CODE/passwords"
+
 # relocate config
 export ACKRC="$XDG_CONFIG_HOME/ackrc"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/settings"
