@@ -44,6 +44,7 @@ export PASSWORD_STORE_DIR="$CODE/passwords"
 
 # relocate config
 export ACKRC="$XDG_CONFIG_HOME/ackrc"
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/settings"
 export IRBRC="$XDG_CONFIG_HOME/irbrc"
 export npm_config_userconfig="$XDG_CONFIG_HOME/npmrc"

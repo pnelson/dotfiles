@@ -10,6 +10,9 @@
 !.config/fcitx/config
 !.config/fcitx/profile
 .config/git/config.local
+.config/gnupg/*
+!.config/gnupg/gpg.conf
+!.config/gnupg/gpg-agent.conf
 .config/gtk-2.0/gtkfilechooser.ini
 .config/pulse/
 .config/weechat/*
