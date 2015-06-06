@@ -22,6 +22,7 @@ source /usr/local/share/chruby/auto.sh
 
 # aliases
 alias cal='cal -A 2'
+alias calc='noglob wcalc --quiet'
 alias cls='clear'
 alias dots='git --git-dir="$DOTFILES"'
 alias ls='LC_COLLATE="C" ls --color=auto --group-directories-first --human-readable'
@@ -29,9 +30,20 @@ alias lsblk='lsblk -o NAME,MOUNTPOINT,FSTYPE,TYPE,SIZE'
 alias lsgroup='cut --delimiter=: --fields=1 /etc/group'
 alias md='mkdcd'
 alias now='date --utc +%Y%m%dT%H%M%SZ'
+alias tolower='tr "[:upper:]" "[:lower:]"'
+alias toupper='tr "[:lower:]" "[:upper:]"'
 alias tree='tree --dirsfirst'
-alias wcalc='wcalc --quiet'
 alias weechat='weechat --dir "$XDG_CONFIG_HOME/weechat"'
+
+# convert fahrenheit to celsius
+function todegc() {
+  echo "scale=2; (5/9)*($1-32)" | bc | sed 's/\..*$//'
+}
+
+# convert celsius to fahrenheit
+function todegf() {
+  echo "scale=2; ((9/5)*$1)+32" | bc | sed 's/\..*$//'
+}
 
 # shortcut for find in current directory
 function ff() {
