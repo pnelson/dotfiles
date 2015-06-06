@@ -25,7 +25,7 @@ xsetroot -cursor_name left_ptr
 
 hsetroot -fill $XDG_CONFIG_HOME/wallpaper &
 unclutter -noevents -root -idle 3 &
-redshift &
+redshift -l $LATITUDE:$LONGITUDE &
 urxvtd --quiet --opendisplay --fork
 fcitx -d
 sxhkd &

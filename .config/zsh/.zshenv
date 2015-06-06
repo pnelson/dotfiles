@@ -26,6 +26,10 @@ export XDG_DATA_DIRS="$XDG_DATA_HOME:/usr/local/share:/usr/share"
 # identity
 export GPGKEY="71ED0A1F"
 
+# location
+export LATITUDE="49.3"
+export LONGITUDE="-123.1"
+
 # source code
 export CODE="$HOME/src/pnelson.ca"
 export GITHUB="$HOME/src/github.com/pnelson"
