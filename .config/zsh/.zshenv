@@ -24,7 +24,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DATA_DIRS="$XDG_DATA_HOME:/usr/local/share:/usr/share"
 
 # identity
-export GPGKEY="71ED0A1F"
+export GPGKEY="4F0A5C4D71ED0A1F"
 
 # location
 export LATITUDE="49.3"
