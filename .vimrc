@@ -109,6 +109,7 @@ let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_user_command = 'ack -f %s'
 
 let g:go_fmt_command = 'goimports'
+let g:go_jump_to_error = 0
 
 " hotkeys
 let mapleader = ','
