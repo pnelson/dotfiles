@@ -56,7 +56,7 @@ export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 export LESSHISTFILE="$XDG_CACHE_HOME/lesshist"
 export XAUTHORITY="$XDG_CACHE_HOME/Xauthority"
 
-# relocate sockets
+# relocate runtime files
 export BSPWM_SOCKET="$XDG_RUNTIME_DIR/bspwm"
 export PANEL_FIFO="$XDG_RUNTIME_DIR/panel"
 export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvt"
