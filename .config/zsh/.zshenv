@@ -49,6 +49,9 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/settings"
 export IRBRC="$XDG_CONFIG_HOME/irbrc"
 export npm_config_userconfig="$XDG_CONFIG_HOME/npmrc"
 
+# relocate shared data
+export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
+
 # relocate temporary data (cache)
 export LESSHISTFILE="$XDG_CACHE_HOME/lesshist"
 export XAUTHORITY="$XDG_CACHE_HOME/Xauthority"
