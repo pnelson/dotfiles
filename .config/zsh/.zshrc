@@ -19,6 +19,7 @@ source "$XDG_DATA_HOME/base16-shell/base16-solarized.light.sh"
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+RUBIES=($HOME/usr/local/*(N))
 
 # aliases
 alias cal='cal -A 2'
@@ -30,6 +31,7 @@ alias lsblk='lsblk -o NAME,MOUNTPOINT,FSTYPE,TYPE,SIZE'
 alias lsgroup='cut --delimiter=: --fields=1 /etc/group'
 alias md='mkdcd'
 alias now='date --utc +%Y%m%dT%H%M%SZ'
+alias ruby-install='ruby-install --rubies-dir "$HOME/usr/local" --src-dir "$XDG_CACHE_HOME"'
 alias tolower='tr "[:upper:]" "[:lower:]"'
 alias toupper='tr "[:lower:]" "[:upper:]"'
 alias tree='tree --dirsfirst'
