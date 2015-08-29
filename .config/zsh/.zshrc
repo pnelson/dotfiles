@@ -67,6 +67,17 @@ function reset_permissions() {
   find . -type f -exec chmod 644 {} +
 }
 
+# set wallpaper to image
+function setwall() {
+  ln --symbolic --force "$1" "$XDG_CONFIG_HOME/wallpaper"
+  hsetroot -fill "$XDG_CONFIG_HOME/wallpaper"
+}
+
+# set lockscreen to image
+function setlock() {
+  ln --symbolic --force "$1" "$XDG_CONFIG_HOME/lockscreen"
+}
+
 # play youtube video by vid
 function youtube() {
   mpv "https://www.youtube.com/watch?v=$1"
