@@ -1,4 +1,5 @@
 --pager=less
+--ignore-dir=.vagrant
 --ignore-dir=bower_components
 --ignore-dir=build
 --ignore-dir=dist
