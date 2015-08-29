@@ -19,7 +19,7 @@ cpu() {
 }
 
 ram() {
-  free | awk '/buffers\/cache/{print $3*100/($3+$4)}' | sed -e 's/\..*$//g'
+  free | awk '/Mem:/{print (($2-$7)/$2)*100}' | sed -e 's/\..*$//g'
 }
 
 volume() {
