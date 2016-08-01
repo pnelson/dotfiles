@@ -16,8 +16,10 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
 Plugin 'baskerville/vim-sxhkdrc'
+Plugin 'chase/vim-ansible-yaml'
 Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'markcornick/vim-terraform'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
@@ -104,6 +106,8 @@ let g:airline_mode_map = {
 \   'S'  : 'S',
 \   '' : 'S',
 \ }
+
+let g:ansible_options = {'ignore_blank_lines': 0}
 
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_user_command = 'ack -f %s'

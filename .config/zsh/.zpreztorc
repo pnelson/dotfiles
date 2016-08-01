@@ -40,3 +40,5 @@ zstyle ':prezto:module:syntax-highlighting' styles \
 
 zstyle ':prezto:module:history-substring-search:color' found 'fg=yellow'
 zstyle ':prezto:module:history-substring-search:color' not-found 'fg=red'
+
+zstyle ':prezto:module:ssh:load' identities ''

@@ -21,5 +21,6 @@ bspc rule --add crx_hbdpomandigafcibbmofojjchbcdagbl desktop=^8
 bspc rule --add crx_pjkljhegncpnkpknbcohdijeoejaedia desktop=^9
 bspc rule --add keepassx floating=on
 bspc rule --add sxiv fullscreen=on
+bspc rule --add zathura floating=on
 
 $XDG_CONFIG_HOME/bspwm/panel &
